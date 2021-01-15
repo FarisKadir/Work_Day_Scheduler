@@ -3,9 +3,8 @@
 
 ## Description
 
-'''
 I created this work day scheduler page as a way to practice using moment.js and introducing jquery into my skillset.
-'''
+
 
 ## User Story
 
