@@ -37,5 +37,10 @@ THEN the saved events persist
 ## Mock Up
 
 '''
-Coming Soon...
+![Mockup Image](Assets/completed.png)
 '''
+
+## Completed Work
+
+(https://fariskadir.github.io/Work_Day_Scheduler/)
+
