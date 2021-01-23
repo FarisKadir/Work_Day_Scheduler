@@ -18,67 +18,83 @@ When the page loads
 
 //start of document ready
 $(document).ready(function()    {
+
+    //Get today's date
+    var today = moment().format("dddd, MMMM Do, YYYY");
+    var now = moment().format('LT');
+    console.log("This is the current time: " + now);
+
     //An array for the time slots
-    var times = [9,10,11,12,13,14,15,16,17,18,19,20];
+    var times = [9,10,11,12,13,14,15,16,17]
+
+   
+    var slot = moment().set({"hour": 9, "minute": 00, "seconds": 00, "millisecond": 00}).format('LT');
+
+    console.log("This is the timeslot: " + slot);
+
+    console.log(now +" " + slot);
+
+
+
+    // if (moment(slot).isBefore(now))    {
+    //     console.log("Current Time: " + now);
+    //     console.log("Timeslot: " + slot);
+    //     console.log("This is in the past");
+    // }
+    // else if (now === slot) {
+    //     console.log("Today's date/time: " + now);
+    //     console.log("Timeslot: " + slot);
+    //     console.log("This is the present")
+    // }
+    // else if (slot > now)    {
+    //     console.log("Today's date/time: " + now);
+    //     console.log("Timeslot: " + slot);
+    //     console.log("This is in the future")
+    // }
+
 
     //Set today's date
-    $("#currentDay").text(moment().format("dddd, MMMM Do, YYYY"));
+    $("#currentDay").text(today);
 
     //retrieve the current hour
-    var now = parseInt(moment().format('h'));
+
 
 
     //Variables to keep adding rows
     function createTime()    {
+        var tRow = $("<tr>");
+        var tData = $("<td>");
+        function createRow(x)   {
+            tRow.addClass("row time-block " + x);
+            tRow.attr("colspan","800");
+            $(".timeslots").append(tRow);
+            $(".time-block").append(tData);
+            tData.addClass("hour");
+        }
+
         for (var i = 0; i < times.length; i++)  {
-            var tRow = $("<tr>");
-            var tData = $("<td>");
-
-            if (times[i] <= now) {
-                tRow.addClass("row time-block past");
-                tRow.attr("colspan","800");
-                $(".timeslots").append(tRow);
-                $(".time-block").append(tData);
-                tData.addClass("hour");
-
+            if (times[i] < now) {
+               createRow("past");
+               console.log("This is in the past");
+               break;
+            }
+            else if (times[i] === now)  {
+                createRow("present");
+                console.log("This is in the present");
+                break;
+            }
+            else    {
+                createRow("future");
+                console.log("This is in the future");
+                break;
             }
 
-
-
-
-
-
-
             tRow.addClass("row time-block");
-
-
-            // div.attr("data-time", times[i])
-            
-            // $(".timeslots").append(div);
-            
-            
-            // if (times[i] < now) {
-            //     div.addClass("past");
-            //     $(".time-block").append(span);
-            // }
-            // else    {
-            //     div.addClass("future");
-            //     $(".time-block").append(span);
-            // }
 
         };
 
 
 
     }
-
-    createTime();
-    
-
-
-
-
-
-
-}) //End of document ready
-
+//End of document ready
+});
