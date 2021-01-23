@@ -4,7 +4,6 @@ body {
   line-height: 1;
 }
 
-
 textarea{
   background: transparent;
   border: none;
@@ -33,6 +32,8 @@ img:hover {
   color: black;
   border-radius: 0;
   border-bottom: 10px solid black;
+  margin: 10px;
+  padding: 0px;
 }
 
 .description{
