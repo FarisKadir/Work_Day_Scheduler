@@ -15,16 +15,15 @@
         <p id="currentDay" class="lead"></p>
     </header>
     <main class="container">
-        <table>
-            <tbody class="timeslots">
-                <tr class="row time-block past">
-                    <td class="hour" cols="80" style="vertical-align: center;">9 am</td>
-                    <td><textarea></textarea></td>
-                    <td class="saveBtn">Space 3</td>
-                </tr>
-
-            </tbody>
-        </table>
+        <div class="row time-block past">
+            <div class="col-md-1 hour"><p class="time">9 AM</p></div>
+            <div class="col-md-10 input-text">
+                <textarea cols="100"></textarea>
+            </div>
+            <div class="col-md-1 saveBtn">
+                
+            </div>
+        </div>
     </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>

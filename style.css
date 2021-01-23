@@ -4,17 +4,6 @@ body {
     line-height: 1;
   }
 
-  main{
-    margin-left:auto;
-    margin-right: auto;
-  }
-
-  table {
-    width: 70%;
-    margin-left:  auto;
-    margin-right: auto;
-  }
-
   textarea  {
     background: transparent;
     border: none;
@@ -86,3 +75,7 @@ body {
     transition: all .3s ease-in-out;
   }
   
+  .time   {
+    margin-top: 10;
+    margin-bottom: auto;
+  }
