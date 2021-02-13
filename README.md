@@ -40,7 +40,7 @@ THEN the saved events persist
 ![Mockup Image](Assets/completed.png)
 '''
 
-## Completed Work
+## Deployed Project
 
 (https://fariskadir.github.io/Work_Day_Scheduler/)
 
