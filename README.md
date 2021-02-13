@@ -3,7 +3,7 @@
 
 ## Description
 
-I created this work day scheduler page as a way to practice using moment.js and introducing jquery into my skillset.
+This is a single day work scheduled I created. It uses the the bootstrap css framework, moment.js library, jquery / javascript, and html. It is able to store entries into local storage and help you keep track of your day to day schedule.
 
 
 ## User Story
