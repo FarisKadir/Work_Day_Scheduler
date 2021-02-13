@@ -37,7 +37,8 @@ THEN the saved events persist
 ## Mock Up
 
 '''
-![Mockup Image](Assets/completed.png)
+![Mockup Image](Assets/scheduler1.png)
+![Mockup Image](Assets/scheduler2.png)
 '''
 
 ## Deployed Project
